@@ -1,60 +1,34 @@
 # p5.js Template
 
-This is a README file that can be used to describe and document your assignment.
+# My thinking process
+The code is about using code to redraw Yayoi Kusama's work.
+At first I was thinking along the lines of using a square pattern like this to cycle through horizontal and vertical
 
-Markdown Cheatsheet (from [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)):
+([![square pattern.png](https://imgpile.com/images/Dh70Sj.png)]
 
----
----
+Then after some experimentation and thought I decided that this method required too much code So then I wonder whether it would be simpler to write out a whole row pattern and have it loop vertically
 
-# Heading1
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5
-###### Heading6
+[![whole row.png](https://imgpile.com/images/Dh7vU8.md.png)]
 
-**bold text**
+At first I was thinking about how it would be if I put the canvas right in the center, but then I thought about how it would be more of a hassle if the circle didn't start at zero and I still had to need to do the math, so I chose to start at the top left corner without having to transfer the coordinates. And I was just starting to think about what would happen if the circle was based on quantity. But found it still very cumbersome
 
-*italicized text*
+![sketch about canvas.jpg](https://imgpile.com/images/Dh7ZoF.jpg)
 
-~~strikethrough text~~
+![sketchs about size.jpg](https://imgpile.com/images/DhN5ZE.jpg)
 
-Ordered List:
-1. First item
-2. Second item
-3. Third item
+Eventually I came up with and experimented with the method of directly setting the size and distance of the circle and then looping based on the control spacing. Getting inspired by the TIPS, I realized that small circles can indeed be covered by large circles, which makes it a lot easier to do so
 
-Unordered List:
-- First item
-- Second item
-- Third item
+After drawing the large circle I can then change the whole position according to translate（）, so this is the easier way to do it. I make the position of the circle more precise by fine tuning the spacing and size
 
-`short code block`
-
-```
-extended code block
-fun() {
-  return 0
-}
-```
-
-Link:  
-[linked text](https://www.example.com)
+![position sketch.jpg](https://imgpile.com/images/DhNPhj.jpg)
 
 
-Image with url:  
-![image description](https://dm-gy-6063-2023f-d.github.io/assets/homework/02/clark-espaco-modulado-00.jpg)
 
 
-Image on repo:  
-![image description](./file-name.jpg)
 
 
-To start a new line, add two spaces at the end of a line, like this:  
-this is a new line.
 
 
-To start a new paragraph, leave an empty line between two lines of text.
 
-This is a new paragraph.
+
+
